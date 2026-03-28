@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>APKACFO — Digital Adoption in Financial Services (2026)</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a18; padding: 2rem 1rem; }
+  .container { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; color: #1a1a18; }
+  .subtitle { font-size: 13px; color: #73726c; margin-bottom: 1.5rem; }
+  .krow { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-bottom: 1.2rem; }
+  .k { background: #fff; border-radius: 10px; border: 0.5px solid #d3d1c7; padding: .85rem .7rem; text-align: center; }
+  .k .v { font-size: 20px; font-weight: 600; color: #1a1a18; }
+  .k .l { font-size: 11px; color: #73726c; margin-bottom: 3px; }
+  .k .s { font-size: 10px; color: #888780; margin-top: 2px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-bottom: 1.2rem; }
+  .card { background: #fff; border-radius: 12px; border: 0.5px solid #d3d1c7; padding: 1rem 1.1rem; }
+  .ct { font-size: 12px; font-weight: 600; color: #5f5e5a; margin-bottom: 8px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 11px; color: #73726c; justify-content: center; }
+  .ld { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+  .full { margin-bottom: 1.2rem; }
+  footer { margin-top: 2rem; font-size: 11px; color: #888780; text-align: center; }
+  @media (max-width: 600px) {
+    .krow { grid-template-columns: repeat(2, 1fr); }
+    .two { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>APKACFO — Digital Adoption in Financial Services</h1>
+  <div class="subtitle">Industrial Training Project · Strategic Digital Marketing & Website Development · 2026</div>
+
+  <!-- KPI Row 1 -->
+  <div class="krow">
+    <div class="k"><div class="l">SME digital finance need</div><div class="v">63M+</div><div class="s">SMEs in India underserved</div></div>
+    <div class="k"><div class="l">Virtual CFO market</div><div class="v">$1.9B</div><div class="s">India, CAGR 18.2%</div></div>
+    <div class="k"><div class="l">GST-registered businesses</div><div class="v">14.6M</div><div class="s">Need compliance digitally</div></div>
+    <div class="k"><div class="l">Fintech adoption rate</div><div class="v">87%</div><div class="s">vs 67% global average</div></div>
+  </div>
+
+  <!-- KPI Row 2 -->
+  <div class="krow">
+    <div class="k"><div class="l">UPI unique users</div><div class="v">500M+</div><div class="s">Target 1B by late 2026</div></div>
+    <div class="k"><div class="l">Jan Dhan accounts</div><div class="v">567M</div><div class="s">Opened since 2014</div></div>
+    <div class="k"><div class="l">Financial inclusion</div><div class="v">80%</div><div class="s">Up from 53% in 2014</div></div>
+    <div class="k"><div class="l">Digital pay market</div><div class="v">$7.93B</div><div class="s">2026, CAGR 16.1%</div></div>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="two">
+    <div class="card">
+      <div class="ct">Digital finance tools — adoption relevance for APKACFO services (%)</div>
+      <div style="position:relative;width:100%;height:230px"><canvas id="a1"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="ct">APKACFO client segments — digital financial maturity</div>
+      <div style="position:relative;width:100%;height:230px"><canvas id="a2"></canvas></div>
+      <div class="leg">
+        <span style="display:flex;align-items:center;gap:4px"><span class="ld" style="background:#1D9E75"></span>Fully digital</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="ld" style="background:#EF9F27"></span>Partially digital</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="ld" style="background:#D85A30"></span>Offline / traditional</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="two">
+    <div class="card">
+      <div class="ct">APKACFO service delivery — traditional vs digital (% of clients)</div>
+      <div style="position:relative;width:100%;height:200px"><canvas id="a3"></canvas></div>
+      <div class="leg">
+        <span style="display:flex;align-items:center;gap:4px"><span class="ld" style="background:#3266ad"></span>Digital delivery</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="ld" style="background:#D85A30"></span>Traditional delivery</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">Key digital finance drivers for APKACFO's SME/MSME clients</div>
+      <div style="position:relative;width:100%;height:200px"><canvas id="a4"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="full card">
+    <div class="ct">Digital adoption opportunity score — by APKACFO service area (out of 10)</div>
+    <div style="position:relative;width:100%;height:175px"><canvas id="a5"></canvas></div>
+  </div>
+
+  <footer>APKACFO Industrial Training Project · Data compiled 2025–2026 · For academic and strategic reference</footer>
+</div>
+
+<script>
+// A1
+new Chart(document.getElementById('a1'),{
+  type:'bar',
+  data:{
+    labels:['Cloud accounting (Zoho/Tally)','UPI / digital invoicing','GST & tax portals','AI-based MIS reporting','Account Aggregator','Digital lending platforms','Automated payroll tools','E-sign & digital docs'],
+    datasets:[{data:[92,88,95,78,72,65,74,82],backgroundColor:'#3266ad',borderRadius:4,borderSkipped:false}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'% relevant'}}},
+    scales:{x:{min:0,max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'rgba(128,128,128,0.12)'}},y:{ticks:{font:{size:9}},grid:{display:false}}}
+  }
+});
+
+// A2
+new Chart(document.getElementById('a2'),{
+  type:'bar',
+  data:{
+    labels:['Startups','SMEs','MSMEs','Family biz','Multinationals'],
+    datasets:[
+      {label:'Fully digital',data:[72,45,28,18,88],backgroundColor:'#1D9E75',borderRadius:3,borderSkipped:false},
+      {label:'Partially digital',data:[20,38,42,35,10],backgroundColor:'#EF9F27',borderRadius:3,borderSkipped:false},
+      {label:'Offline/traditional',data:[8,17,30,47,2],backgroundColor:'#D85A30',borderRadius:3,borderSkipped:false}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false}},
+    scales:{x:{stacked:true,ticks:{font:{size:10}},grid:{display:false}},y:{stacked:true,max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'rgba(128,128,128,0.12)'}}}
+  }
+});
+
+// A3
+new Chart(document.getElementById('a3'),{
+  type:'line',
+  data:{
+    labels:['2020','2021','2022','2023','2024','2025','2026*'],
+    datasets:[
+      {label:'Digital delivery',data:[22,35,48,58,68,78,85],borderColor:'#3266ad',backgroundColor:'rgba(50,102,173,0.1)',fill:true,borderWidth:2.5,pointRadius:4,pointBackgroundColor:'#3266ad',tension:0.35},
+      {label:'Traditional delivery',data:[78,65,52,42,32,22,15],borderColor:'#D85A30',backgroundColor:'rgba(216,90,48,0.07)',fill:true,borderWidth:2,pointRadius:3,pointBackgroundColor:'#D85A30',tension:0.35,borderDash:[4,3]}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false}},
+    scales:{x:{ticks:{font:{size:10}},grid:{display:false}},y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'rgba(128,128,128,0.12)'}}}
+  }
+});
+
+// A4
+new Chart(document.getElementById('a4'),{
+  type:'bar',
+  data:{
+    labels:['GST & compliance automation','Real-time MIS dashboards','UPI & digital payments','Digital lending access','MSME loan eligibility reports','AI-based forecasting','E-invoicing (IRP portal)'],
+    datasets:[{data:[91,84,88,72,68,62,86],backgroundColor:'#534AB7',borderRadius:4,borderSkipped:false}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw+'% SMEs demand this'}}},
+    scales:{x:{min:0,max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'rgba(128,128,128,0.12)'}},y:{ticks:{font:{size:9}},grid:{display:false}}}
+  }
+});
+
+// A5
+new Chart(document.getElementById('a5'),{
+  type:'bar',
+  data:{
+    labels:['Virtual CFO','GST & tax filing','MIS & analytics','Cash flow mgmt','Strategic planning','Digital lending advisory','Payroll & compliance','Due diligence'],
+    datasets:[{
+      data:[9.5,9.2,8.8,9.0,8.2,8.6,8.4,7.8],
+      backgroundColor:['#3266ad','#1D9E75','#534AB7','#D85A30','#EF9F27','#5DCAA5','#73726c','#3266ad'],
+      borderRadius:4,borderSkipped:false
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Score: ${c.raw}/10`}}},
+    scales:{x:{ticks:{font:{size:9},maxRotation:30},grid:{display:false}},y:{min:0,max:10,ticks:{font:{size:10}},grid:{color:'rgba(128,128,128,0.12)'}}}
+  }
+});
+</script>
+</body>
+</html>
